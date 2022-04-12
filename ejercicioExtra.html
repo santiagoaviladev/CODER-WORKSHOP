@@ -1,0 +1,27 @@
+<button id="myBtn">Mostrar Datos</button>
+<html>
+<head>
+<script src="data/data.js"></script>
+</head>
+<body>
+  <div id="lista"></div>
+</body>
+<script>
+  
+  const btn = document.querySelector("#myBtn");
+  btn.addEventListener("click", ()=>mostrarLista());
+
+  function mostrarLista()
+  {
+    const lista = document.querySelector("#lista");
+    usuarios.forEach(element => {
+        const nodoLi = document.createElement("li");
+        nodoLi.setAttribute("style", "width:300px;border:1px solid green;border-radius:20px;margin-top:5px;padding:3%;")
+        nodoLi.innerHTML=`${element.first_name}`;
+        lista.appendChild(nodoLi);
+    });
+  }
+  
+
+</script>
+</html>
